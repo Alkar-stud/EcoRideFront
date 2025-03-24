@@ -1,2 +1,24 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import 'custom';
+
+
+.my-toggler-icon {
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(46 203 113)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  }
+
+.navbar-toggler {
+  border-color: #2ecc71;
+}
+
+/**
+ * Couleurs du menu seul, hover et actif
+ */
+#top-menu a{
+    color: $primary;
+}
+#top-menu a:hover{
+    font-weight:bold;
+}
+.link-menu-active{
+    font-weight:bold;
+}
