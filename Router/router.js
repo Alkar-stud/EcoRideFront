@@ -42,6 +42,9 @@ const LoadContentPage = async () => {
     document.querySelector("body").appendChild(scriptTag);
   }
 
+  // Changement du titre de la page
+  document.title = actualRoute.title + " - " + websiteName;
+
   // Ajout de la class sur le lien du menu qui est actif
   let myLinkPath = path;
   if (myLinkPath === "/") {
@@ -53,7 +56,7 @@ const LoadContentPage = async () => {
   if (myLink) {
     myLink.classList.add("link-menu-active");
   }
-};
+y};
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
