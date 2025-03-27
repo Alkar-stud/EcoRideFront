@@ -1,1 +1,44 @@
-<h1>Bienvenue sur le site de EcoRide</h1>
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Trouvez votre covoiturage</h1>
+        <br><br>
+        <div class="container">
+            <form action="/searchcovoit" method="POST" class="row g-3 align-items-center justify-content-center">
+                <div class="col-md-3 col-12">
+                    <input type="text" class="form-control" placeholder="D'où partez-vous ?" required>
+                </div>
+                <div class="col-md-3 col-12">
+                    <input type="text" class="form-control" placeholder="Où allez-vous ?" required>
+                </div>
+                <div class="col-md-3 col-12">
+                    <input type="date" class="form-control text-light" placeholder="Quand partez-vous ?" required>
+                </div>
+                <div class="col-md-auto col-12">
+                    <button class="btn btn-primary">Rechercher</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center mt-5">
+    <a href="/addcovoit" class="btn btn-primary">J'ai de la place dans ma voiture</a>
+</div>
+<br>
+
+<div class="container bg-secondary-subtle h-auto">
+    <h2 class="text-center text-primary">Qui sommes-nous ?</h2>
+    <div class="d-flex flex-column flex-md-row align-items-center align-top">
+        <img class="w-10 rounded img-introduction" src="/images/EcoRideFounder_wore.jpg" alt="Foundateur EcoRide"/>
+        <p class="text-primary">EcoRide est une entreprise française récemment créée, dédiée à la promotion du covoiturage écologique.
+            Notre objectif est de réduire les émissions de CO2 et de diminuer la congestion routière en facilitant les trajets partagés entre particuliers.
+            Nous croyons fermement que chaque trajet partagé contribue à la préservation de notre planète.
+            <br><br>
+            Nous nous sommes donné comme mission de réduire l'impact environnemental des déplacements en encourageant le covoiturage écologique.
+            <br><br>
+            Nous nous engageons à promouvoir des pratiques de mobilité durable et nous investissons continuellement dans des technologies innovantes pour améliorer
+            l'expérience de covoiturage.
+            <br><br>
+        </p>
+    </div>
+</div>

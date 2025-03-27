@@ -4,7 +4,12 @@
 
 html {
   position: relative;
-  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the body at least the height of the viewport */
 }
 
 .my-toggler-icon {
@@ -30,6 +35,12 @@ html {
 
 main {
   margin-bottom: 60px;
+  flex-grow: 1; /* Allow main to take up remaining space */
+  padding-top: 101px; /* Add padding to prevent content from being hidden behind the header */
+}
+
+a.header {
+  font-size: 30px;
 }
 
 footer.footer {
@@ -37,4 +48,68 @@ footer.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+p {
+  font-family: $font-family-serif;
+  font-size:18px;
+}
+
+
+.hero-scene{
+  position: relative;
+  &::before{
+      content:"";
+      position: absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background-image: url(../images/FondHeroScene.jpg);
+      background-size: cover;
+      filter: brightness(0.3);
+  }
+
+  *{
+      //Positionner les éléments devant le ::before
+      position:relative;
+  }
+
+  .hero-scene-content{
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+}
+
+.container {
+  min-width: 100%;
+}
+
+.img-introduction {
+  padding:4px;
+  text-align: center;
+  // Remove float: left;
+  max-height: 100%;
+  margin:5px 10px 15px;
+  display:block;
+  // Add a max-width to the image
+  max-width: 200px;
+}
+
+// Add styles for the container
+.container.bg-secondary-subtle {
+  //display: flex; // Remove this line
+  //flex-wrap: wrap; // Remove this line
+  //align-items: center; // Remove this line
+  //justify-content: center; // Remove this line
+  padding: 15px; // Add padding to the container
+}
+
+// Add styles for the paragraph
+.container.bg-secondary-subtle p {
+  //flex: 1 1 auto; // Remove this line
+  text-align: justify; // Justify the text
 }
