@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css"/>
-    
+
 </head>
 <body>
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
               <a class="navbar-brand fw-bold text-primary header" href="/"><img src="/images/logoforEcoRide-dark.png" alt="Logo">&nbsp;&nbsp;EcoRide</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#top-menu" aria-controls="top-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon my-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="top-menu">
@@ -31,7 +31,7 @@
                     <a class="nav-link" id="link-account" href="/account">Mon compte</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="link-signin" href="/signin">Connexion/Deconnexion</a>
+                    <a class="nav-link" id="link-signin" href="/signin">Connexion</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" id="link-contact" href="/contact">Contact</a>
@@ -49,12 +49,13 @@
     @<span id="AfficheAnnee"></span> - contact@ecoride.fr - <a href="/mentionslegales">Mentions légales</a>
   </footer>
     
-    <script type="module" src="/Router/router.js"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script type="module" src="/Router/router.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     
-    <SCRIPT LANGUAGE="JavaScript">
+  <script language="JavaScript">
       var maintenant=new Date();
       document.getElementById("AfficheAnnee").innerHTML=maintenant.getFullYear();
-      </SCRIPT>
+  </script>
 </body>
 </html>

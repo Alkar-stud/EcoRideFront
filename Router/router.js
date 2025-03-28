@@ -56,7 +56,7 @@ const LoadContentPage = async () => {
   if (myLink) {
     myLink.classList.add("link-menu-active");
   }
-y};
+};
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
