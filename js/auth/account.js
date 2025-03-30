@@ -19,6 +19,11 @@ function removeProfilePhoto() {
     profileIcon.classList.remove('d-none');
 }
 
+
+// Fonction pour ajouter une section de véhicule
+// Cette fonction est appelée lorsque l'utilisateur clique sur le bouton "Ajouter un véhicule"
+// Elle crée un nouvel élément de formulaire pour un véhicule et l'ajoute au conteneur de véhicules
+// Elle utilise un compteur pour donner un identifiant unique à chaque véhicule ajouté
 let vehicleCount = 1;
 
 function addVehicleSection(event) {
