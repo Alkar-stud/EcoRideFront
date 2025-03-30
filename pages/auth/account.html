@@ -1,0 +1,153 @@
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <h1>Mon compte</h1>
+    </div>
+</div>
+<div class="container">
+    <form>
+        <!-- Section: Photo de profil -->
+        <section class="mb-4">
+            <h2 class="fs-4">Photo de profil</h2>
+            <div class="d-flex align-items-center mb-3">
+                <!-- Icône ou photo -->
+                <div class="profile-container me-3" style="position: relative; width: 50px; height: 50px;">
+                    <i class="bi bi-person-circle fs-1" id="profileIcon" style="position: absolute; top: 0; left: 0;"></i>
+                    <img src="" alt="Profil" id="profilePhoto" class="rounded-circle d-none">
+                </div>
+                <!-- Boutons d'action -->
+                <div>
+                    <label for="PhotoInput" class="form-label">Ajouter/Modifier photo</label>
+                    <input class="form-control form-control-sm" id="PhotoInput" type="file" onchange="updateProfilePhoto(event)">
+                    <button type="button" class="btn btn-link text-danger d-block mt-2" onclick="removeProfilePhoto()">Supprimer la photo</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Informations personnelles -->
+        <section class="mb-4">
+            <h2 class="fs-4">Informations personnelles</h2>
+            <div class="mb-3">
+                <label for="PseudoInput" class="form-label">Pseudo</label>
+                <input type="text" class="form-control" id="PseudoInput" placeholder="Votre pseudo" value="John" name="Pseudo">
+            </div>
+            <div class="mb-3">
+                <label for="NomInput" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="NomInput" placeholder="Votre nom" name="nom">
+                <div class="invalid-feedback">Le nom est requis</div>
+            </div>
+            <div class="mb-3">
+                <label for="PrenomInput" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom" name="prenom">
+                <div class="invalid-feedback">Le prénom est requis</div>
+            </div>
+            <div class="mb-3">
+                <label for="BirthDateInput" class="form-label">Date de naissance</label>
+                <input type="date" class="form-control" id="BirthDateInput" name="birthdate">
+                <div class="invalid-feedback">La date de naissance est requise</div>
+            </div>
+            <div class="mb-3">
+                <label for="PhoneInput" class="form-label">Numéro de téléphone</label>
+                <input type="tel" class="form-control" id="PhoneInput" placeholder="Votre numéro de téléphone" name="phone">
+            </div>
+            <div class="mb-3">
+                <label for="AddressInput" class="form-label">Adresse</label>
+                <input type="text" class="form-control" id="AddressInput" placeholder="Votre adresse" name="address">
+            </div>
+        </section>
+
+        <!-- Section: Véhicules -->
+        <section class="mb-4">
+            <h2 class="fs-4">Mes véhicules</h2>
+            <div class="accordion" id="vehicleAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="vehicleHeading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vehicleCollapse" aria-expanded="false" aria-controls="vehicleCollapse">
+                            Informations sur les véhicules
+                        </button>
+                    </h2>
+                    <div id="vehicleCollapse" class="accordion-collapse collapse" aria-labelledby="vehicleHeading" data-bs-parent="#vehicleAccordion">
+                        <div class="accordion-body">
+                            <fieldset class="border rounded-3 p-3">
+                                <legend>&Agrave propos du véhicule</legend>
+                                <div class="mb-3">
+                                    <label for="LicensePlateInput" class="form-label">Plaque d'immatriculation</label>
+                                    <input type="text" class="form-control" id="LicensePlateInput">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="LicenseDateInput" class="form-label">Date de première immatriculation</label>
+                                    <input type="date" class="form-control" id="LicenseDateInput">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="VehicleBrandInput" class="form-label">Marque du véhicule</label>
+                                    <input type="text" class="form-control" id="VehicleBrandInput">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="VehicleModelInput" class="form-label">Modèle du véhicule</label>
+                                    <input type="text" class="form-control" id="VehicleModelInput">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="VehicleColorInput" class="form-label">Couleur du véhicule</label>
+                                    <input type="text" class="form-control" id="VehicleColorInput">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="VehicleEnergyInput" class="form-label">&Eacute;nergie du véhicule</label>
+                                    <select id="VehicleEnergyInput" class="form-select">
+                                        <option value="">--- Choisir ---</option>
+                                        <option value="Electrique">Electrique</option>
+                                        <option value="Hybride">Hybride</option>
+                                        <option value="Essence">Essence</option>
+                                        <option value="Diesel">Diesel</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="AvailablePlacesInput" class="form-label">Nombres de places disponibles</label>
+                                    <input type="number" class="form-control" id="AvailablePlacesInput" placeholder="Combien vous êtes habituellement ?" value="4" name="NbConvives">
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline-secondary mt-3"><i class="bi bi-plus-circle"></i> Ajouter un véhicule</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Préférences -->
+        <section class="mb-4">
+            <h2 class="fs-4">Mes préférences</h2>
+            <fieldset class="border rounded-3 p-3">
+                <legend>Préférences</legend>
+                <div class="mb-3">
+                    <label>Fumeur ?</label>
+                    <div>
+                        <input type="radio" class="form-check-input" id="NoSmoke" name="SmokeAsk" value="NoSmoke">
+                        <label for="NoSmoke" class="form-check-label"><img src="/images/fumeur-non.png" alt="Non-fumeur"> Non-fumeur</label>
+                        <input type="radio" class="form-check-input" id="OkSmoke" name="SmokeAsk" value="OkSmoke">
+                        <label for="OkSmoke" class="form-check-label"><img src="/images/fumeur-ok.png" alt="Fumeur autorisé"> Fumeur autorisé</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label>Acceptez-vous les animaux ?</label>
+                    <div>
+                        <input type="radio" class="form-check-input" id="NoPet" name="PetAsk" value="NoPet">
+                        <label for="NoPet" class="form-check-label"><img src="/images/animaux-non.png" alt="Pas d'animaux"> Pas d'animaux</label>
+                        <input type="radio" class="form-check-input" id="OkPet" name="PetAsk" value="OkPet">
+                        <label for="OkPet" class="form-check-label"><img src="/images/animaux-ok.png" alt="Animaux autorisé"> Animaux acceptés</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="prefs">D'autres préférences ?</label>
+                    <input type="text" class="form-control" id="prefs" name="prefs">
+                </div>
+            </fieldset>
+        </section>
+
+        <!-- Boutons d'action -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Modifier vos informations</button>
+            <button type="button" class="btn btn-danger">Supprimer mon compte</button>
+        </div>
+    </form>
+    <div class="text-center pt-3">
+        <a href="/editPassword">Cliquez ici pour modifier votre mot de passe</a>
+    </div>
+</div>
